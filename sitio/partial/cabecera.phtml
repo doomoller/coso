@@ -1,0 +1,9 @@
+<?php if($this->usuario != null): ?>
+    <aside id="barra-cabecera">
+        <div class="cabecera-item-foto"><a href="/usuarios/ver?id=<?php echo $this->usuario->id?>"><img class="cabereca-foto" src="/uimgs/<?php echo $this->usuario->foto ?>" /></a></div>
+        <div class="cabecera-item"><a href="/usuarios/ver?id=<?php echo $this->usuario->id?>"><?php echo $this->usuario->nombre . ' ' . $this->usuario->apellido ?></a></div>
+        <div class="cabecera-item-salir"><a href="/usuarios/logout/">Salir</a></div>
+    </aside>
+<?php else: ?>
+    
+<?php endif;?>

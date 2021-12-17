@@ -1,0 +1,19 @@
+
+
+<div id="contact-form">
+<h3>Formulario de contacto: </h3>
+
+<p><?php echo $this->msg ?></p>
+
+<form action="/usuarios/contacto" method="post">
+<div class="formdiv">Nombre:<input type="text" name="nombre" value="<?php echo $this->nombre?>"></div>
+
+<div class="formdiv">e-mail:<input type="email" name="correo" value="<?php echo $this->correo ?>"></div>
+
+<div class="formdiv">Sobre:<textarea name="asunto" style="width:98%" rows="10"><?php echo $this->texto ?></textarea></div>
+
+<input type="hidden" name="csrf" value="<?php echo $this->csrf?>">
+<input type="submit" name="enviar" value="Send">
+</form>
+</div>
+

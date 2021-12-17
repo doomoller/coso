@@ -1,0 +1,29 @@
+<div class="fitcont centrado">
+	<?php if($this->usuario == null): ?>
+		<h2><?php echo $this->msg ?></h2>
+    	<form class="sombra1" action="/usuarios/login" method="post">
+        	
+        	<div class="divform">
+        	<label for="correo">Correo: </label>
+        		<input type="email" name="correo"  value="" placeholder="Su-correo@ejemplo.com" required />
+        	</div>
+        	
+        	<div class="divform">
+        	<label for="clave">Clave: </label>
+        		<input type="password" name="clave"  value="" placeholder="Su clave personal" required />
+        	</div>
+        	<br/>
+        	<div class="divform">
+        		<input type="submit" name="enviar" value="Login">
+        	</div>
+        	<div class="divform">
+        		<a href="/usuarios/clavecambio">¿Olvidó su contraseña?</a>
+        	</div>
+        	<input type="hidden" name="csrf" value="<?php echo $this->csrf?>">
+    	</form>
+    	
+    <?php else :?>
+    	<p>Bienvenido.</p>
+	<?php endif; ?>
+</div>
+	
